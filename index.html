@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bnei Anusim de Guatemala | Comunidad y Torá</title>
+
+<meta name="description" content="Comunidad guatemalteca para Bnei Anusim, descendientes de familias sefardíes y personas que investigan sus raíces judías y desean acercarse nuevamente a la Torá.">
+
+<meta name="keywords" content="Bnei Anusim Guatemala, Anusim Guatemala, sefardí Guatemala, judíos sefardíes Guatemala, descendientes sefardíes, conversos Guatemala, criptojudíos Guatemala, raíces judías Guatemala, Torá, judaísmo sefardí">
+
+<meta name="author" content="Bnei Anusim de Guatemala">
+<meta name="robots" content="index, follow">
+<meta name="language" content="es">
+<meta name="theme-color" content="#050505">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bnei Anusim de Guatemala">
+<meta property="og:description" content="Una comunidad para guatemaltecos que investigan sus raíces sefardíes y buscan acercarse nuevamente a la Torá.">
+<meta property="og:image" content="hero.jpg">
+<meta property="og:locale" content="es_GT">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#050505;
+    color:#f5f5f5;
+    line-height:1.7;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at center, #17120a 0%, #050505 55%, #000 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 25px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hebrew{
+    font-size:58px;
+    color:#d4af37;
+    margin-bottom:10px;
+    font-family:Georgia,serif;
+}
+
+.ancestral{
+    color:#9d7b2f;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+h1{
+    font-family:Georgia,serif;
+    font-size:62px;
+    line-height:1.05;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#d2d2d2;
+    max-width:760px;
+    margin:0 auto 32px;
+}
+
+.tags{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:38px;
+}
+
+.tag{
+    border:1px solid #3b3020;
+    background:#0d0b08;
+    padding:10px 17px;
+    border-radius:999px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    background:#b8860b;
+    color:#050505;
+    text-decoration:none;
+    padding:18px 34px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    background:#d4af37;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:85px 25px;
+}
+
+h2{
+    text-align:center;
+    color:#d4af37;
+    font-family:Georgia,serif;
+    font-size:40px;
+    margin-bottom:45px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+}
+
+.card{
+    background:#101010;
+    border:1px solid #282319;
+    border-radius:16px;
+    padding:30px;
+    text-align:center;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#8f7025;
+}
+
+.card .icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    color:#fff;
+    margin-bottom:10px;
+    font-family:Georgia,serif;
+}
+
+.card p{
+    color:#aaa;
+}
+
+/* =========================
+   HISTORIA
+========================= */
+
+.history{
+    background:#080705;
+    border-top:1px solid #1d1810;
+    border-bottom:1px solid #1d1810;
+    max-width:none;
+}
+
+.history-inner{
+    max-width:1000px;
+    margin:auto;
+}
+
+.history-text{
+    color:#c9c9c9;
+    font-size:18px;
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+}
+
+/* =========================
+   MEMORIA / SANGRE
+========================= */
+
+.heritage{
+    text-align:center;
+    background:
+        radial-gradient(circle at center, #180909 0%, #080505 60%, #050505 100%);
+    border-top:1px solid #241515;
+    border-bottom:1px solid #241515;
+    max-width:none;
+}
+
+.heritage-content{
+    max-width:900px;
+    margin:auto;
+}
+
+.blood{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.heritage p{
+    max-width:780px;
+    margin:auto;
+    color:#bbb;
+    font-size:18px;
+}
+
+/* =========================
+   TOPICS
+========================= */
+
+.topics{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.topics ul{
+    list-style:none;
+}
+
+.topics li{
+    margin:16px 0;
+    font-size:18px;
+}
+
+.topics li:before{
+    content:"✡";
+    color:#d4af37;
+    margin-right:12px;
+}
+
+.quote{
+    border-left:3px solid #d4af37;
+    padding-left:22px;
+    font-size:26px;
+    color:#eee;
+    font-family:Georgia,serif;
+    font-style:italic;
+}
+
+/* =========================
+   COMMUNITY
+========================= */
+
+.community{
+    background:#080808;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+details{
+    background:#101010;
+    border:1px solid #282828;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:15px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#fff;
+}
+
+details p{
+    color:#aaa;
+    margin-top:12px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:#080706;
+    text-align:center;
+    padding:95px 25px;
+    border-top:1px solid #252015;
+    max-width:none;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 30px;
+    color:#ccc;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#000;
+    border-top:1px solid #222;
+    color:#777;
+    text-align:center;
+    padding:30px;
+}
+
+.footer-hebrew{
+    color:#8f7025;
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:42px;
+    }
+
+    h2{
+        font-size:32px;
+    }
+
+    .topics{
+        grid-template-columns:1fr;
+    }
+
+    .quote{
+        font-size:21px;
+    }
+
+    .hebrew{
+        font-size:44px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =====================================
+     HERO
+====================================== -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="hebrew">
+בני אנוסים
+</div>
+
+<div class="ancestral">
+Guatemala · Sefarad · Torá
+</div>
+
+<h1>
+Bnei Anusim de Guatemala
+</h1>
+
+<p>
+Una comunidad para guatemaltecos que investigan sus posibles
+raíces sefardíes, la memoria de sus antepasados y el camino
+de regreso al estudio de la Torá y la tradición de Israel.
+</p>
+
+<div class="tags">
+
+<div class="tag">🇬🇹 Guatemala</div>
+
+<div class="tag">🕎 Sefarad</div>
+
+<div class="tag">📜 Torá</div>
+
+<div class="tag">🩸 Memoria ancestral</div>
+
+<div class="tag">✡ Bnei Anusim</div>
+
+</div>
+
+<a class="btn"
+href="https://chat.whatsapp.com/KhczuLg0kACInIj0a2sV32">
+
+Unirse a la comunidad
+
+</a>
+
+</div>
+
+</header>
+
+
+<!-- =====================================
+     QUIÉNES SOMOS
+====================================== -->
+
+<section>
+
+<h2>
+¿Quiénes somos?
+</h2>
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="icon">
+🇬🇹
+</div>
+
+<h3>
+Guatemaltecos
+</h3>
+
+<p>
+Una comunidad enfocada específicamente en personas de Guatemala
+interesadas en investigar sus posibles raíces judías sefardíes.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🕎
+</div>
+
+<h3>
+Bnei Anusim
+</h3>
+
+<p>
+Personas que investigan una posible ascendencia de familias
+judías que fueron convertidas al cristianismo bajo presión
+o persecución.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+📖
+</div>
+
+<h3>
+Torá
+</h3>
+
+<p>
+Estudio de la Torá, Tanaj, tradición sefardí, historia judía
+y fuentes rabínicas.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================
+     HISTORIA
+====================================== -->
+
+<section class="history">
+
+<div class="history-inner">
+
+<h2>
+Una historia que no terminó
+</h2>
+
+<p class="history-text">
+
+Durante siglos, numerosas familias judías de la península ibérica
+fueron obligadas o presionadas a abandonar públicamente el judaísmo.
+
+La expulsión de 1492 marcó uno de los momentos más importantes
+de esta historia, aunque las conversiones forzadas y persecuciones
+habían comenzado antes.
+
+Algunas familias conservaron recuerdos, costumbres, apellidos,
+tradiciones familiares o relatos transmitidos entre generaciones.
+
+Esta comunidad busca estudiar esa historia con seriedad y explorar
+las posibles raíces sefardíes presentes en Guatemala.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================
+     MEMORIA / SANGRE
+====================================== -->
+
+<section class="heritage">
+
+<div class="heritage-content">
+
+<div class="blood">
+🩸 🩸 🩸
+</div>
+
+<h2>
+Memoria, sangre y tradición
+</h2>
+
+<p>
+
+La expresión “sangre sefardí” puede formar parte de la memoria
+familiar y de la investigación genealógica.
+
+Sin embargo, un apellido, una apariencia física o una tradición
+aislada no constituyen por sí solos una prueba de ascendencia
+judía.
+
+Aquí buscamos investigar nuestras raíces mediante historia
+familiar, documentos, genealogía y fuentes históricas.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================
+     TEMAS
+====================================== -->
+
+<section>
+
+<h2>
+¿Qué estudiaremos?
+</h2>
+
+<div class="topics">
+
+<ul>
+
+<li>
+Historia de los judíos de Sefarad
+</li>
+
+<li>
+Expulsión de 1492
+</li>
+
+<li>
+Conversos y Anusim
+</li>
+
+<li>
+Historia sefardí en América
+</li>
+
+<li>
+Presencia judía en Guatemala
+</li>
+
+<li>
+Genealogía familiar
+</li>
+
+<li>
+Archivos históricos
+</li>
+
+<li>
+Apellidos y documentación
+</li>
+
+</ul>
+
+
+<div class="quote">
+
+“Y volverás a Hashem tu Dios,
+y escucharás su voz…”
+
+<br><br>
+
+— Deuteronomio 30:2
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================
+     COMUNIDAD
+====================================== -->
+
+<section class="community">
+
+<h2>
+Más que genealogía
+</h2>
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="icon">
+📜
+</div>
+
+<h3>
+Historia
+</h3>
+
+<p>
+Investigar la historia sefardí y el recorrido de las familias
+que llegaron al mundo hispanoamericano.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🔎
+</div>
+
+<h3>
+Genealogía
+</h3>
+
+<p>
+Compartir métodos para investigar documentos, archivos,
+apellidos y árboles familiares.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+📚
+</div>
+
+<h3>
+Torá
+</h3>
+
+<p>
+Acercarnos al estudio de la Torá y a las fuentes tradicionales
+del judaísmo.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🤝
+</div>
+
+<h3>
+Comunidad
+</h3>
+
+<p>
+Conectar a guatemaltecos que comparten este interés histórico,
+espiritual y cultural.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================
+     FAQ
+====================================== -->
+
+<section>
+
+<h2>
+Preguntas frecuentes
+</h2>
+
+
+<details>
+
+<summary>
+¿Tengo que demostrar que soy judío para entrar?
+</summary>
+
+<p>
+
+No. La comunidad está orientada a personas que investigan sus
+posibles raíces sefardíes o Bnei Anusim.
+
+La investigación genealógica y el estatus religioso son
+cuestiones diferentes.
+
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+¿Es una comunidad exclusivamente de Guatemala?
+</summary>
+
+<p>
+
+Sí. El proyecto está pensado principalmente para personas
+residentes en Guatemala y para familias guatemaltecas interesadas
+en investigar sus raíces sefardíes.
+
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+¿Un apellido sefardí demuestra ascendencia judía?
+</summary>
+
+<p>
+
+No necesariamente.
+
+Los apellidos pueden aparecer en muchas familias y regiones.
+Por eso recomendamos investigar documentos genealógicos e
+históricos antes de sacar conclusiones.
+
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+¿Se estudiará judaísmo?
+</summary>
+
+<p>
+
+Sí.
+
+Además de historia y genealogía, habrá espacio para estudiar
+Torá, Tanaj, festividades, hebreo, tradición sefardí y fuentes
+judías tradicionales.
+
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+¿Puedo entrar aunque todavía no sea judío?
+</summary>
+
+<p>
+
+Sí.
+
+El objetivo es crear un espacio respetuoso para investigar,
+aprender y conectar con otras personas interesadas en esta historia.
+
+</p>
+
+</details>
+
+
+<!-- =====================================
+     CTA FINAL
+====================================== -->
+
+<section class="cta">
+
+<h2>
+¿Buscas a otros Bnei Anusim en Guatemala?
+</h2>
+
+<p>
+
+Si tu familia conserva historias, apellidos, documentos o
+tradiciones que te han llevado a investigar una posible raíz
+sefardí, puedes unirte a la comunidad y comenzar a investigar
+junto a otros guatemaltecos.
+
+</p>
+
+<a class="btn"
+href="https://chat.whatsapp.com/KhczuLg0kACInIj0a2sV32">
+
+Entrar al WhatsApp
+
+</a>
+
+</section>
+
+
+<!-- =====================================
+     FOOTER
+====================================== -->
+
+<footer>
+
+<div class="footer-hebrew">
+בני אנוסים
+</div>
+
+Bnei Anusim de Guatemala · Sefarad · Torá · 2026
+
+</footer>
+
+
+</body>
+</html>
